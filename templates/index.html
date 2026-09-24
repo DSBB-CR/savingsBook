@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Broker App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📈 Брокерский учёт</h1>
+
+    <section class="card">
+        <h2>Добавить операцию</h2>
+        <form id="op-form">
+            <label>Дата <input type="datetime-local" name="date" required></label>
+            <label>Тикер <input type="text" name="ticker" placeholder="SBER" required></label>
+            <label>Тип
+                <select name="side">
+                    <option value="buy">Покупка</option>
+                    <option value="sell">Продажа</option>
+                </select>
+            </label>
+            <label>Кол-во <input type="number" step="any" name="quantity" required></label>
+            <label>Цена <input type="number" step="any" name="price" required></label>
+            <label>Комиссия <input type="number" step="any" name="commission" value="0"></label>
+            <label>Заметка <input type="text" name="note"></label>
+            <button type="submit">Добавить</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Портфель</h2>
+        <table id="portfolio-table">
+            <thead>
+                <tr><th>Тикер</th><th>Кол-во</th><th>Средняя</th><th>Вложено</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section class="card">
+        <h2>Операции</h2>
+        <table id="ops-table">
+            <thead>
+                <tr>
+                    <th>Дата</th><th>Тикер</th><th>Тип</th>
+                    <th>Кол-во</th><th>Цена</th><th>Комиссия</th><th>Заметка</th><th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
