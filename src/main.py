@@ -1,14 +1,13 @@
-
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from typing import List
 
-from database import Base, engine, get_db
-import models
-import crud
-from schemas import OperationCreate, OperationOut, Position
+from src.database import Base, engine, get_db
+import src.models as models
+import src.crud as crud
+from src.schemas import OperationCreate, OperationOut, Position
 
 Base.metadata.create_all(bind=engine)
 

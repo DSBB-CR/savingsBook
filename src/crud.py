@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from datetime import datetime
-from models import Operation
-from schemas import OperationCreate
+from src.models import Operation
+from src.schemas import OperationCreate
 
 
 def list_operations(db: Session):
