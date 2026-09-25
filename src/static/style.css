@@ -271,6 +271,10 @@ tbody tr {
 tbody tr:hover { background: rgba(255, 255, 255, .02); }
 
 .num { text-align: right; font-variant-numeric: tabular-nums; }
+.ressSumm {
+    color: var(--green);
+}
+
 
 .side-buy {
     color: var(--green);

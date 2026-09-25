@@ -4,10 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from typing import List
 
-from src.database import Base, engine, get_db
-import src.models as models
-import src.crud as crud
-from src.schemas import OperationCreate, OperationOut, Position
+from database import Base, engine, get_db
+import models as models
+import crud as crud
+from schemas import OperationCreate, OperationOut, Position
 
 Base.metadata.create_all(bind=engine)
 

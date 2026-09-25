@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime
 from datetime import datetime
-from src.database import Base
+from database import Base
 
 
 class Operation(Base):

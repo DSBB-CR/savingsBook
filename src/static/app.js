@@ -93,7 +93,7 @@ async function loadPortfolio() {
             <td class="ticker">${escapeHtml(p.ticker)}</td>
             <td class="num">${fmtNum(p.quantity, 4)}</td>
             <td class="num">${fmtNum(p.avg_price)}</td>
-            <td class="num">${fmtNum(p.invested)}</td>
+            <td class="num ressSumm">${fmtNum(p.invested)}</td>
         `;
         portBody.appendChild(tr);
     }
